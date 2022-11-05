@@ -31,7 +31,7 @@ const concesionaria = {
         }
     },
   */
-  buscarAuto: function (patenteBuscada) {
+  buscarAuto2: function (patenteBuscada) {
     let autoBuscado = null;
     for (let i = 0; i < this.autos.length; i++) {
       if (this.autos[i].patente == patenteBuscada) {
@@ -41,8 +41,8 @@ const concesionaria = {
 
     return autoBuscado;
   },
-  // otra forma
-  /*
+  // otra forma mejor y mas rápida porque retorna apenas lo encuentra
+  
     buscarAuto : function (patenteBuscada) {
         for (let i=0; i < this.autos.length; i++) {
             if (this.autos[i].patente == patenteBuscada){
@@ -52,10 +52,10 @@ const concesionaria = {
       
         return null;
     },
-    */
+    
   // otra forma :
 
-  // buscarAuto : function(patenteBuscada){
+  // buscarAuto3 : function(patenteBuscada){
   //  let autoBuscado = this.autos.find(function(auto){
   //   return auto.patente == patenteBUscada;
   //
@@ -199,7 +199,7 @@ const concesionaria = {
 console.table(concesionaria.venderAuto("JJK116"));
 //console.table(concesionaria.autosParaLaVenta());
 //console.table(concesionaria.autosNuevos());
-console.table(concesionaria.listaDeVentas());
+//console.table(concesionaria.listaDeVentas());
 //console.log(concesionaria.totalDeVentas());
 //console.log(concesionaria.puedeComprar("MAQ222", persona));
 //console.table(concesionaria.autosQuePuedeComprar(persona));
