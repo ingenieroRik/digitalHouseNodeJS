@@ -107,8 +107,15 @@ const concesionaria = {
     }
     return listaVentas;
 
-    let listaVentas2 = this.autos.filter((a) => a.vendido).map((a) => a.precio);
+    
   },
+
+  listaDeVentas2: function () {
+    let listaVentas2 = this.autos.filter((a) => a.vendido).map((a) => a.precio);
+    return listaVentas2;
+  },
+
+
 
   // esta funcion devuelve la suma total de las ventas
   totalDeVentas: function () {
@@ -196,11 +203,12 @@ const concesionaria = {
   },
 };
 
-console.table(concesionaria.venderAuto("JJK116"));
+//console.table(concesionaria.venderAuto("JJK116"));
 //console.table(concesionaria.autosParaLaVenta());
 //console.table(concesionaria.autosNuevos());
-//console.table(concesionaria.listaDeVentas());
+console.table(concesionaria.listaDeVentas2());
+console.table(concesionaria.listaDeVentas());
 //console.log(concesionaria.totalDeVentas());
 //console.log(concesionaria.puedeComprar("MAQ222", persona));
 //console.table(concesionaria.autosQuePuedeComprar(persona));
-console.table(concesionaria.autosQuePuedeComprar2(persona));
+//console.table(concesionaria.autosQuePuedeComprar2(persona));
