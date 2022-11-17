@@ -106,15 +106,12 @@ const concesionaria = {
       }
     }
     return listaVentas;
-
-    
   },
 
   listaDeVentas2: function () {
     let listaVentas2 = this.autos.filter((a) => a.vendido).map((a) => a.precio);
     return listaVentas2;
   },
-
 
 
   // esta funcion devuelve la suma total de las ventas
