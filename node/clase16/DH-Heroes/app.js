@@ -6,10 +6,11 @@ const app = express();
 
 //const publicRuta = path.resolve(__dirnamr, './public');
 //app.use(express.static(publicRuta));
-app.use(express.static(path.resolve(__dirname, './public')));
+//app.use(express.static(path.resolve(__dirname, './public')));
+app.use(express.static('public'))
 
 app.listen(3030, () =>
-console.log('Servidor corriendo')
+console.log('Servidor corriendo en http://localhost:3030')
 );
 
 app.get('/', (req, res) => {
@@ -21,7 +22,7 @@ app.get('/babbage', (req, res) => {
 });
 
 app.get('/berners-lee', (req, res) => {
-    res.sendFile(path.join(__dirname,'/views/berners-lee'));
+    res.sendFile(path.join(__dirname,'/views/berners-lee.html'));
 });
 
 app.get('/clarke', (req, res) => {
